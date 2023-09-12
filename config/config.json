@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "default",
-    "password": "USXPb3v9IMyl",
-    "database": "verceldb",
-    "host": "ep-royal-butterfly-47762989-pooler.us-east-1.postgres.vercel-storage.com",
+    "username": "hng_backend_task_user",
+    "password": "0ClNHQ97MPaq3N51JXRijSTIc1OIIJPo",
+    "database": "hng_backend_task",
+    "host": "dpg-ck0477p5mpss73ckq3sg-a",
     "dialect": "postgres"
   }
 }
