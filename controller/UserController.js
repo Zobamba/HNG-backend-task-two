@@ -16,7 +16,7 @@ class UserController {
         newUser.save().then((usr) => {
           res.status(201).send({
             id: usr.id,
-            Name: usr.name,
+            name: usr.name,
             message: 'User created successfully',
           })
         });
@@ -29,7 +29,7 @@ class UserController {
       if (usr) {
         res.status(200).send({
           id: usr.id,
-          Name: usr.name,
+          name: usr.name,
         })
       } else {
         res.status(404).send({
