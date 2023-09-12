@@ -29,13 +29,6 @@ Response Body
 
 Use this to fetch details of a user
 
-Request Param
-```
-{
-  user_id 
-}
-```
-
 Response Code
 ```
 200
@@ -52,13 +45,6 @@ Response Body
 ### PUT /api/:user_id
 
 Use this to modify details of an existing user
-
-Request Param
-```
-{
-  user_id
-}
-```
 
 Request Body
 ```
@@ -88,13 +74,6 @@ Response Body
 
 Use this to remove a user
 
-Request Param
-```
-{
-  user_id
-}
-```
-
 Response Code
 ```
 200
@@ -109,15 +88,71 @@ Response Body
 
 # Sample Usage
 
-Facebook API is a good sample usage for this API.
+### POST http://localhost:5000/api
 
-Usually to use facebook, one have to register(POST). After keying a few correct data, the user clicks a button to "register"(request) and the registration is processed then the user gets "signed in"(response)
+Request Body 
+```
+{
+  "name": "Onah Zoba"
+}
+```
 
-Viewing a profile is an example of a GET request that was implemented on this API. A user clicks on a button to "view profile"(request) and the profile is displayed(response).
+Response Code
+```
+201
+```
 
-A user also have the capacity to "edit profile"(request) by clicking a button after making some changes, then the profile is updated(response).
+Response Body
+```
+{
+"id": 3,
+"Name": "Onah Zoba",
+"message": "User successfully created"
+}
+```
 
-It is also possible for a user to delete an account by clicking a button(request) and te account will be deleted(response).
+### GET http://localhost:5000/api/:user_id
+
+Response Code
+```
+200
+```
+
+Response Body
+```
+{
+    "id": 2,
+    "Name": "Zoba Onah"
+}
+```
+
+### PUT http://localhost:5000/api/:user_id
+
+Request Body
+```
+{
+  "name": "Mark John"
+}
+```
+
+Response Code
+```
+200
+```
+
+### DELETE http://localhost:5000/api/:user_id
+
+Response Code
+```
+200
+```
+
+Response Body
+```
+{
+    "message": "User deleted successfully"
+}
+```
 
 
 # Any known limitations or assumptions made during development
@@ -125,6 +160,17 @@ It is also possible for a user to delete an account by clicking a button(request
 I feel that having more user information would have given some uniqueness to the users.
 
 There was no instruction to add validation that prevents two users from sharing same name. So i assume i am supposed to add that.
+
+
+# Endpoint Urls
+
+### POST https://hng-backend-task-two-zobamba.onrender.com/api
+
+### GET https://hng-backend-task-two-zobamba.onrender.com/api/user_id
+
+### PUT https://hng-backend-task-two-zobamba.onrender.com/api/user_id
+
+### DELETE https://hng-backend-task-two-zobamba.onrender.com/api/user_id
 
 
 # Instructions for setting up and deploying the API locally or on a server.

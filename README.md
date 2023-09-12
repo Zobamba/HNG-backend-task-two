@@ -24,10 +24,10 @@ You need postgres installed and running on your computer.
 
 # Endpoints
 
-1. POST /api  ------> To add a new person
-2. GET /api/:user_id  ------> To fetch details of a person
-3. PUT /api/:user_id  ------> To modify details of an existing person
-4. DELETE /api/:user_id  ------> To remove a person
+### POST /api  ------> To add a new person
+### GET /api/:user_id  ------> To fetch details of a person
+### PUT /api/:user_id  ------> To modify details of an existing person
+### DELETE /api/:user_id  ------> To remove a person
 
 # To Do
 
