@@ -1,43 +1,79 @@
 # Standard formats for requests and responses for each endpoint
 
-1. POST /api  ------> To add a new person
+### POST /api
 
-Request: 
+Use this to add a new user
+
+Request Body 
+```
 {
   "name": "Onah Zoba"
 }
+```
 
-Response:
+Response Code
+```
+201
+```
+
+Response Body
+```
 {
 "id": 3,
 "Name": "Onah Zoba",
 "message": "User successfully created"
-"status": 201
 }
+```
 
-2. GET /api/:user_id  ------> To fetch details of a person
+### GET /api/:user_id
 
-Request: 
+Use this to fetch details of a user
+
+Request Param
+```
 {
-  user_id (param)
+  user_id 
 }
+```
 
-Response:
+Response Code
+```
+200
+```
+
+Response Body
+```
 {
     "id": 2,
     "Name": "Zoba Onah"
-    status: 200
 }
+```
 
-3. PUT /api/:user_id  ------> To modify details of an existing person
+### PUT /api/:user_id
 
-Request:
+Use this to modify details of an existing user
+
+Request Param
+```
 {
-  user_id (param)
+  user_id
+}
+```
+
+Request Body
+```
+{
   "name": "Mark John"
 }
+```
 
-Response:
+Response Code
+```
+200
+```
+
+Response Body 
+```
 {
   "newPerson": {
         "id": 1,
@@ -46,20 +82,141 @@ Response:
         "updatedAt": "2023-09-11T17:15:50.818Z"
     }
     "message": "User updated successfully"
-    status: 200
 }
+```
+### DELETE /api/:user_id
 
-4. DELETE /api/:user_id  ------> To remove a person
+Use this to remove a user
 
-Request: 
+Request Param
+```
 {
-  user_id (param)
+  user_id
 }
+```
 
-Response: 
+Response Code
+```
+200
+```
+
+Response Body
+```
 {
     "message": "User deleted successfully"
 }
+```
+
+
+# Standard formats for requests and responses for each endpoint (for name query param)
+
+### POST /api
+
+Use this to add a new user
+
+Request Body 
+```
+{
+  "name": "Onah Zoba"
+}
+```
+
+Response Code
+```
+201
+```
+
+Response Body
+```
+{
+"id": 3,
+"Name": "Onah Zoba",
+"message": "User successfully created"
+}
+```
+
+### GET /api
+
+Use this to fetch details of a user
+
+Request Param
+```
+{
+  ?name=Zoba Onah
+}
+```
+
+Response Code
+```
+200
+```
+
+Response Body
+```
+{
+    "id": 2,
+    "Name": "Zoba Onah"
+}
+```
+
+### PUT /api
+
+Use this to modify details of an existing user
+
+Request Param
+```
+{
+  ?name=Zoba Onah
+}
+```
+
+Request Body
+```
+{
+  "name": "Mark John"
+}
+```
+
+Response Code
+```
+200
+```
+
+Response Body 
+```
+{
+  "newPerson": {
+        "id": 1,
+        "name": "Mark John",
+        "createdAt": "2023-09-11T10:23:09.946Z",
+        "updatedAt": "2023-09-11T17:15:50.818Z"
+    }
+    "message": "User updated successfully"
+}
+```
+
+### DELETE /api
+
+Use this to remove a user
+
+Request Param
+```
+{
+  ?name=Zoba Onah
+}
+```
+
+Response Code
+```
+200
+```
+
+Response Body
+```
+{
+    "message": "User deleted successfully"
+}
+```
 
 
 # Sample Usage
