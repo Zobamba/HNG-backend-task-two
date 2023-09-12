@@ -1,6 +1,4 @@
-import { body, param, buildCheckFunction, validationResult } from 'express-validator';
-
-const checkBodyAndQuery = buildCheckFunction(['body', 'params', 'query']);
+import { body, param, validationResult } from 'express-validator';
 
 export const validateFormData = (req, res, next) => {
   const errors = validationResult(req);
