@@ -1,11 +1,10 @@
 {
   "development": {
-    "username": "hng_backend_task_user",
-    "password": "0ClNHQ97MPaq3N51JXRijSTIc1OIIJPo",
-    "database": "hng_backend_task",
-    "hostname": "dpg-ck0477p5mpss73ckq3sg-a",
-    "dialect": "postgres",
-    "port": 5432
+    "username": "chizoba",
+    "password": "onah2020",
+    "database": "HNG-Person",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "test": {
     "username": "chizoba",
