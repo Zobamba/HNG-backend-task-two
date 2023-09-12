@@ -18,7 +18,6 @@
     "password": "0ClNHQ97MPaq3N51JXRijSTIc1OIIJPo",
     "database": "hng_backend_task",
     "host": "dpg-ck0477p5mpss73ckq3sg-a",
-    "dialect": "postgres",
-    "port": 5432
+    "dialect": "postgres"
   }
 }
