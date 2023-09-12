@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "chizoba",
-    "password": "onah2020",
-    "database": "HNG-Person",
-    "host": "127.0.0.1",
+    "username": "default",
+    "password": "USXPb3v9IMyl",
+    "database": "verceldb",
+    "host": "ep-royal-butterfly-47762989-pooler.us-east-1.postgres.vercel-storage.com",
     "dialect": "postgres"
   }
 }
