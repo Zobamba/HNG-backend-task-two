@@ -21,9 +21,7 @@ class UserController {
           })
         });
       }
-    }).catch((error) => {
-      console.log(error);
-    }) 
+    });
   }
 
   fetchUserByIdParam(req, res) {
